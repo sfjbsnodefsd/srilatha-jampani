@@ -1,0 +1,14 @@
+{
+  "name": "node_js",
+  "version": "1.0.0",
+  "description": "This is the First application for Node JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Test123"
+  ],
+  "author": "Srilatha",
+  "license": "ISC"
+}
