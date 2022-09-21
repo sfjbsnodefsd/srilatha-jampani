@@ -3,7 +3,16 @@
 const  http = require('http');
 
 function greet(req,resp) {
-    resp.write("<h1>Hey this is Philip,I hope you are having a great day!</h1>")
+    resp.writeHead(200,{'Content-Type':'application/json'});
+    resp.write(JSON.stringify({
+        "name":"Srilatha",
+        "Empid": "101",
+        "address":{
+            "street":"zxy street",
+            "city":"Banglure",
+            "State": "Karnataka"
+        }
+    }))
     resp.end();
 }
    
