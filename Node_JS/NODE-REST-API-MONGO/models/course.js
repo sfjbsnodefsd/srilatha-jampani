@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const coures = mongoose.Schema({
+const Course = mongoose.Schema({
     title:{
         type:String,
         require:true
@@ -15,5 +15,4 @@ const coures = mongoose.Schema({
     },
     active:Boolean
 })
-
-module.exports=mongoose.model("courses",course)
+module.exports=mongoose.model("courses",Course)
