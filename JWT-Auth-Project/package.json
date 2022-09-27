@@ -1,12 +1,12 @@
 {
   "name": "auth-app",
   "version": "1.0.0",
-  "description": "this a node js app that we will use to perform rest api and create jwt token",
+  "description": "this is a node js app that we will use to perform rest api functions and create jwt token",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"nodemon app.js"
   },
-  "author": "Srilatha",
+  "author": "Nishant",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
