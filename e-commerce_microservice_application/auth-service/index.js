@@ -1,5 +1,4 @@
 const express = require("express");
-const { JsonWebTokenError } = require("jsonwebtoken");
 const mongoose = require("mongoose");
 const app = express();
 const PORT = 5000;

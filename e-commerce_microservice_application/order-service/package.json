@@ -1,12 +1,12 @@
 {
   "name": "order-service",
   "version": "1.0.0",
-  "description": "order service",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Srilatha",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "amqplib": "^0.10.3",
