@@ -1,12 +1,12 @@
 To start Mongo DB
 
-In one command shell run Mongod
-In one comand shell run mongo
+In one CMD we need to run Mongod
+In one CMD run mongo
 
 
 to create the databases run 
 use auth-service
-user product-service
+use product-service
 
 
 to clone a docker image of rabbitmq 
