@@ -20,46 +20,6 @@ mongoose
     console.error("[PENSIONER_DETAIL-SERVICE] - DB connection failed!");
   });
 
-// let connection, channel;
-
-// async function connect() {
-//   const amqpServer = "amqp://localhost:5672";
-//   connection = await amqp.connect(amqpServer);
-//   channel = await connection.createChannel();
-//   await channel.assertQueue("PENSIONER_DETAIL");
-// }
-
-// connect().then(() => {
-//   channel.consume("PENSIONER_DETAIL", (data) => {
-//       const { aadhaar } = JSON.parse(data.content);
-//       // console.log(JSON.parse(data.content))
-
-//       PensionerDetail.findOne({ aadhaar: aadhaar })
-//         .then((doc) => {
-//           const response = {
-//             success: 1,
-//             pensioner: doc,
-//           };
-//           channel.sendToQueue(
-//             "PROCESS_PENSION",
-//             Buffer.from(JSON.stringify(response))
-//           );
-//           channel.ack(data);
-//         })
-//         .catch((err) => {
-//           const response = {
-//             success: 0,
-//             err,
-//           };
-//           channel.sendToQueue(
-//             "PROCESS_PENSION",
-//             Buffer.from(JSON.stringify(response))
-//           );
-//           channel.ack(data);
-//         });
-//   });
-// });
-
 app.get("/pensioner/:aadhaar", async (req, res) => {
   const { aadhaar } = req.params;
   try {
