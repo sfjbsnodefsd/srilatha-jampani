@@ -6,9 +6,9 @@ const bodyparser = require("body-parser");
 app.use(bodyparser.json());
 
 var mysqlConnection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "root",
+  host: "database-1-srilatha.ccuk83kbvjoz.ap-northeast-1.rds.amazonaws.com",
+  user: "admin",
+  password: "admin1234",
   database: "employeedb",
   multipleStatements:true
 });
