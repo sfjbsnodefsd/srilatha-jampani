@@ -5,6 +5,7 @@ const PensionerDetail = require("./PensionerDetail");
 const PORT = process.env.PORT || 5002;
 const amqp = require("amqplib");
 const utils = require("./utils");
+const isAuthenticated = require("../isAuthenticated");
 
 const app = express();
 app.use(express.json());
@@ -20,7 +21,8 @@ mongoose
     console.error("[PENSIONER_DETAIL-SERVICE] - DB connection failed!");
   });
 
-app.get("/pensioner/:aadhaar", async (req, res) => {
+app.get("/pensioner/:aadhaar",isAuthenticated, async (req, res) => { 
+
   const { aadhaar } = req.params;
   try {
     const doc = await PensionerDetail.findOne({ aadhaar: aadhaar });
@@ -44,7 +46,7 @@ app.get("/pensioner/:aadhaar", async (req, res) => {
 });
 
 // add a new pensioner
-app.post("/pensioner", (req, res) => {
+app.post("/pensioner",isAuthenticated, (req, res) => {
   const {
     name,
     dob,
